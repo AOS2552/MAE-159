@@ -9,6 +9,7 @@ This is the project directory for the MAE159 Subsonic Transport aircraft design 
 *   `modules/`: Directory containing project modules.
     *   `modules/drag/`: Drag calculation module.
         *   `calculate_drag.m`: MATLAB function to calculate drag coefficient CD.
+        *   `test_drag.m`: Test script for verify drag calculations.
 
 ## Usage
 

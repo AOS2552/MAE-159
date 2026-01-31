@@ -18,5 +18,3 @@ end
 % e = 0.85;
 % CD = calculate_drag(CL, AR, e);
 % fprintf('Calculated CD for CL=%.2f, AR=%.2f, e=%.2f: %.5f\n', CL, AR, e, CD);
-% fprintf('Calculated CD for CL=%.2f, AR=%.2f, e=%.2f: %.5f\n', CL, AR, e, CD);
-
