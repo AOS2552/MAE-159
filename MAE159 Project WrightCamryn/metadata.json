@@ -1,1 +1,28 @@
-{"project_name": "MAE159 Subsonic Transport","author": "Your Name","language": "matlab","seating_abreast": 9,"units": "English","design_mach": 0.85,"target_range_nmi": 7000}
+{
+	"student_info": {
+		"name": "Wright, Camryn",
+		"student_id": "41465105",
+		"email": "wright@uci.edu",
+		"language": "matlab"
+	},
+	"project_info": {
+		"aircraft_type": "To be determined",
+		"design_requirements": {
+			"range_nm": 0,
+			"passengers": 0,
+			"cruise_mach": 0.0
+		},
+		"design_choices": {
+			"wing_configuration": "",
+			"engine_type": "",
+			"rationale": "Document your design decisions here as the course progresses"
+		},
+		"version_info": {
+			"current_version": "1.0",
+			"last_updated": "2026-01-30",
+			"modules_completed": [
+				"drag"
+			]
+		}
+	}
+}
