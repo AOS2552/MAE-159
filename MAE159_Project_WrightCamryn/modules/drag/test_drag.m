@@ -79,3 +79,39 @@ e_exp3  = 1.0 / (1.035 + 0.38 * CD0_3 * pi * AR_3);
 CD_exp3 = CD0_3 + (CL_3^2) / (pi * AR_3 * e_exp3);
 
 fprintf('Test Case 3 (Low Aspect Ratio):\n');
+fprintf('  Inputs:   CL=%.2f, AR=%.1f, CD0=%.3f\n', CL_3, AR_3, CD0_3);
+fprintf('  Output:   CD = %.4f\n', result3.CD);
+fprintf('  Expected: CD = %.4f\n', CD_exp3);
+fprintf('------------------------------------------------------------\n');
+
+
+%% ------------------------------------------------------------------------
+% TEST CASE 4: DRAG POLAR PLOT (Visualization)
+% -------------------------------------------------------------------------
+% Reference: MAE159 Week 3 Problem Statement (Visualization requirement)
+
+fprintf('\nGenerating Drag Polar Plot...\n');
+
+% Create vector of Lift Coefficients (Vectorization check)
+CL_vec = -0.5:0.05:1.5;
+
+% Use Test Case 1 geometry
+results_vec = calculate_drag(CL_vec, AR_1, CD0_1);
+
+% Extract CD vector from the result structure
+% Note: Depending on implementation, result.CD might be a vector 
+% or we need to access it differently. 
+% Since calculate_drag supports vector inputs, result.CD should be a vector.
+CD_vec = results_vec.CD;
+
+figure('Name', 'MAE 159 Drag Polar');
+plot(CD_vec, CL_vec, 'b-', 'LineWidth', 2);
+grid on;
+xlabel('Drag Coefficient (C_D)');
+ylabel('Lift Coefficient (C_L)');
+title(['Drag Polar (AR = ', num2str(AR_1), ', C_{D0} = ', num2str(CD0_1), ')']);
+legend('Calculated Polar');
+axis tight;
+
+fprintf('Plot generated successfully.\n');
+fprintf('============================================================\n');
